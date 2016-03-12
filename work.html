@@ -5,20 +5,26 @@ permalink: /work/
 ---
 
 <html>
+
 <head lang="en">
   <meta charset="UTF-8">
   <title>{{page.title}}</title>
 </head>
 <style>
-  .website-img{
+  .website-img {
     position: relative;
     display: block;
     width: 100%;
-    transition: opacity 1s;
-    background-color: black;
+    background-color: white;
+    margin-bottom: 25px;
   }
 
-  .website-img .text{
+  .website-img img{
+    transition: opacity 1s;
+    width: 100%;
+  }
+
+  .website-img .text {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -26,35 +32,54 @@ permalink: /work/
     align-items: center;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
     opacity: 0;
     transition: opacity 1s;
-    color: white;
+    color: black;
+    text-align: center
   }
 
-  .website-img:hover .text{
+  .website-img:hover .text {
     opacity: 1.0;
   }
 
-  .website-img:hover img{
-    opacity: 0.3
+  .website-img:hover img {
+    opacity: 0.05
   }
-
 </style>
+
 <body>
-
-
-<div class="website-img">
-  <img src="/img/stock.jpeg"/>
-  <div class="text">
-    <h1>
-      Stock Website
-    </h1>
-    <p>
-      A website for stock photos
-    </p>
-  </div>
-</div>
-
+  {% for s in site.my_works %}
+  <a href="{{ s.url }}" target="_blank">
+    <div class="website-img">
+      <img src="{{ s.img }}" />
+      <div class="text">
+        <h1>
+          {{ s.title }}
+        </h1>
+        <p>
+          {{ s.description }}
+        </p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+  <hr>
+  <h3 style="margin-top:25px">Other Contributions</h3>
+  {% for s in site.my_contributions %}
+  <a href="{{ s.url }}" target="_blank">
+    <div class="website-img">
+      <img src="{{ s.img }}" />
+      <div class="text">
+        <h1>
+          {{ s.title }}
+        </h1>
+        <p>
+          {{ s.description }}
+        </p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
 </body>
 </html>

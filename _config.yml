@@ -19,3 +19,22 @@ exclude: ['Rakefile']
 
 gems:
   - jekyll-sitemap
+
+my_works:
+  -
+    title: "Caiti & Travis' Wedding"
+    url: "http://caitiandtravis.com"
+    img: "/img/works/caitiandtravis.png"
+    description: "An information and RSVP website for my sister's wedding"
+  -
+    title: "Behave"
+    url: "http://behaveapp.me"
+    img: "/img/works/behave.png"
+    description: "A cloud application for teachers and principals to manage students in the classroom"
+
+my_contributions:
+  -
+    title: "Markus"
+    url: "http://markusproject.org/"
+    img: "/img/works/markus.png"
+    description: "An open-source tool which recreates the ease and flexibility of grading assignments"
