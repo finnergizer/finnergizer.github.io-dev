@@ -28,7 +28,7 @@ my_works:
     description: "An information and RSVP website for my sister's wedding"
   -
     title: "Behave"
-    url: "http://behaveapp.me"
+    url: "http://behave.shaughn.net"
     img: "/img/works/behave.png"
     description: "A cloud application for teachers and principals to manage students in the classroom"
 
